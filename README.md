@@ -8,11 +8,11 @@ Do you want to make your cool code shorts public?
 ### Font-Size
 <i>Based on [MUI Typography](https://mui.com/components/typography)</i>
 <h1>h1. Heading 6rem</h1>
-<h2>h2. Heading 3.75</h2>
+<h2>h2. Heading 3.75rem</h2>
 <h3>h3. Heading 3rem</h3>
 <h4h4. Heading 2.125rem</h4>
 <h5>>h5. Heading 1.5rem</h5>
-<h6>h6. Heading 1.25</h6>
+<h6>h6. Heading 1.25rem</h6>
 <p>body2. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam. 1rem</p>
 <button>BUTTON TEXT 0.875rem</button>
 
