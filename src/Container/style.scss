@@ -1,0 +1,15 @@
+.ms-container {
+  display: flex;
+  flex-direction: column;
+  background: #2223338c;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+}
+
+.ms-sub-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 2rem 1rem;
+}

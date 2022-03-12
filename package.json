@@ -1,0 +1,25 @@
+{
+  "name": "codememe2share",
+  "version": "1.0.0",
+  "description": "Do you want to make your cool code shorts public?",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SitoNumbis/CodeMeme2Share.git"
+  },
+  "keywords": [
+    "meme",
+    "react",
+    "share",
+    "css"
+  ],
+  "author": "Sito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SitoNumbis/CodeMeme2Share/issues"
+  },
+  "homepage": "https://github.com/SitoNumbis/CodeMeme2Share#readme"
+}
