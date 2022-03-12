@@ -1,11 +1,10 @@
 import React from "react";
 
 // components
-import MemeShare, { Container } from "./MemeShare";
-import AppleDots from "./AppleDots/AppleDots";
+import MemeShare, { Container, AppleDots } from "./MemeShare";
 
 // icons
-import { ShareIcon } from "./Icons/icons";
+import { ShareIcon } from "./components/Icons/icons";
 
 const Template = () => {
   return (
@@ -15,8 +14,8 @@ const Template = () => {
     >
       <Container>
         <AppleDots />
-        <Container className="ms-sub-container">
-          <ShareIcon color={"aliceblue"} />
+        <Container className="flex justify-content-center align-items-center">
+          <ShareIcon color="aliceblue" size="xx-larger" />
         </Container>
       </Container>
     </MemeShare>

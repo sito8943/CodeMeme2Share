@@ -1,11 +1,16 @@
-import P from "./Paragraph/Paragraph";
-import T from "./Title/Title";
-import C from "./Container/Container";
+import P from "./components/Typography/Paragraph/Paragraph";
+import T from "./components/Typography/Title/Title";
+import C from "./components/Container/Container";
+import B from "./components/Button/Button";
+import AD from "./components/AppleDots/AppleDots";
 
 import PropTypes from "prop-types";
 
-// styles
-import "./colors.scss";
+// global styles
+import "./assets/theme/colors.scss";
+import "./assets/theme/iconSizes.scss";
+
+// local styles
 import "./style.scss";
 
 const MemeShare = (props) => {
@@ -59,5 +64,9 @@ export const Paragraph = P;
 export const Title = T;
 
 export const Container = C;
+
+export const Button = B;
+
+export const AppleDots = AD;
 
 export default MemeShare;

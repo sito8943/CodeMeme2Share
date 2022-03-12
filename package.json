@@ -46,12 +46,5 @@
   ],
   "author": "Sito",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SitoNumbis/CodeMeme2Share.git"
-  },
-  "bugs": {
-    "url": "https://github.com/SitoNumbis/CodeMeme2Share/issues"
-  },
-  "homepage": "https://github.com/SitoNumbis/CodeMeme2Share#readme"
+  "repository": "https://github.com/SitoNumbis/CodeMeme2Share.git"
 }
