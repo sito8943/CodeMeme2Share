@@ -47,3 +47,13 @@ Do you want to make your cool code shorts public?
 ## Preview
 
 ![js](https://user-images.githubusercontent.com/40501794/158018430-169c3a3c-9cc1-4e44-9b5f-e42304fa74fe.jpg)
+
+### Additional Features
+
+<ul>
+  <li>Container <i>Flexible container component</i></li>
+  <li>Title <i>Based on [MUI Typography](https://mui.com/components/typography) title component</i></li>
+  <li>Paragraph <i>Based on [MUI Typography](https://mui.com/components/typography)</i> body component </li>
+  <li>Button <i>Flexible button component</i></li>
+  <li>Icons from [React Icons](https://react-icons.github.io/react-icons/)</li>
+</ul>
