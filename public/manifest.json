@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Code Meme to Share",
+  "name": "Do you want to make your cool code shorts public?",
   "icons": [
     {
       "src": "favicon.ico",
