@@ -50,10 +50,8 @@ Do you want to make your cool code shorts public?
 
 ### Additional Features
 
-<ul>
-  <li>Container <i>Flexible container component</i></li>
-  <li>Title <i>Based on [MUI Typography](https://mui.com/components/typography) title component</i></li>
-  <li>Paragraph <i>Based on [MUI Typography](https://mui.com/components/typography)</i> body component </li>
-  <li>Button <i>Flexible button component</i></li>
-  <li>Icons from [React Icons](https://react-icons.github.io/react-icons/)</li>
-</ul>
+- Container <i>Flexible container component</i>
+- Title <i>Based on [MUI Typography](https://mui.com/components/typography) title component</i>
+- Paragraph <i>Based on [MUI Typography](https://mui.com/components/typography)</i> body component
+- Button <i>Flexible button component</i>
+- Icons from [React Icons](https://react-icons.github.io/react-icons/)
