@@ -1,4 +1,8 @@
-import { BsArrowRight, BsFillRecordFill } from "react-icons/bs";
+import {
+  BsArrowRight,
+  BsFillRecordFill,
+  BsFillShareFill,
+} from "react-icons/bs";
 import {
   SiJava,
   SiJavascript,
@@ -81,5 +85,11 @@ export const RightArrowIcon = ({ color }) => (
 export const DotIcon = ({ color }) => (
   <span className={color}>
     <BsFillRecordFill />
+  </span>
+);
+
+export const ShareIcon = ({ color }) => (
+  <span className={color}>
+    <BsFillShareFill />
   </span>
 );
