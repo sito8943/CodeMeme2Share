@@ -4,7 +4,7 @@ import React from "react";
 import MemeShare, { Container, AppleDots } from "./MemeShare";
 
 // icons
-import { ShareIcon } from "./components/Icons/icons";
+import Icon, { ShareIcon } from "./components/Icons/icons";
 
 const Template = () => {
   return (
@@ -15,7 +15,8 @@ const Template = () => {
       <Container>
         <AppleDots />
         <Container className="flex justify-content-center align-items-center">
-          <ShareIcon color="aliceblue" size="xx-larger" />
+          <Icon icon="java" />
+          <ShareIcon color="aliceblue" size="xx-large" />
         </Container>
       </Container>
     </MemeShare>
