@@ -38,10 +38,6 @@
       "last 1 safari version"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SitoNumbis/CodeMeme2Share.git"
-  },
   "keywords": [
     "meme",
     "react",
@@ -50,6 +46,10 @@
   ],
   "author": "Sito",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SitoNumbis/CodeMeme2Share.git"
+  },
   "bugs": {
     "url": "https://github.com/SitoNumbis/CodeMeme2Share/issues"
   },

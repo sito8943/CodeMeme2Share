@@ -1,18 +1,22 @@
 import React from "react";
 
 // components
-import MemeShare, { Container, Paragraph, Title } from "./MemeShare";
+import MemeShare, { Container } from "./MemeShare";
 import AppleDots from "./AppleDots/AppleDots";
+
+// icons
+import { ShareIcon } from "./Icons/icons";
 
 const Template = () => {
   return (
-    <MemeShare>
+    <MemeShare
+      backgroundColor="#0093E9"
+      backgroundImage="linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)"
+    >
       <Container>
         <AppleDots />
         <Container className="ms-sub-container">
-          <Title variant="h3">Some Title</Title>
-          <Container className="flex" style={{ marginTop: 25 }}></Container>
-          <Paragraph>Some Text</Paragraph>
+          <ShareIcon color={"aliceblue"} />
         </Container>
       </Container>
     </MemeShare>
