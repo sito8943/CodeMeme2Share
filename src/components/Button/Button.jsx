@@ -24,7 +24,7 @@ Button.defaultProps = {
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  style: PropTypes.objectOf(PropTypes.string),
+  style: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,

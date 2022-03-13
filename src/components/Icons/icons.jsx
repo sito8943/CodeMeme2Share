@@ -170,7 +170,7 @@ Icon.propTypes = {
   size: PropTypes.string,
   id: PropTypes.string,
   className: PropTypes.string,
-  style: PropTypes.objectOf(PropTypes.string),
+  style: PropTypes.objectOf(PropTypes.any),
   icon: PropTypes.string.isRequired,
 };
 

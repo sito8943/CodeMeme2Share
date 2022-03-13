@@ -71,7 +71,7 @@ MemeShare.propTypes = {
   backgroundImage: PropTypes.string,
   background: PropTypes.string,
   children: PropTypes.node.isRequired,
-  style: PropTypes.objectOf(PropTypes.string),
+  style: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
