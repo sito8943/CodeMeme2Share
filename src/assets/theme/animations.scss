@@ -1,3 +1,25 @@
-.rotate {
-  animation: rotation 2s infinite linear;
+.rotate-left {
+  animation: left 2.5s infinite linear;
+}
+
+.rotate-right {
+  animation: right 2.5s infinite linear;
+}
+
+@keyframes left {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes right {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
