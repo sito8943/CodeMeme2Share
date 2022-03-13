@@ -4,6 +4,7 @@ import P from "./components/Typography/Paragraph/Paragraph";
 import T from "./components/Typography/Title/Title";
 import C from "./components/Container/Container";
 import B from "./components/Button/Button";
+import I from "./components/Icons/icons";
 import AD from "./components/AppleDots/AppleDots";
 
 import PropTypes from "prop-types";
@@ -86,5 +87,7 @@ export const Container = C;
 export const Button = B;
 
 export const AppleDots = AD;
+
+export const Icon = I;
 
 export default MemeShare;
