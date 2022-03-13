@@ -8,10 +8,7 @@ import { ShareIcon } from "./components/Icons/icons";
 
 const Template = () => {
   return (
-    <MemeShare
-      backgroundColor="#0093E9"
-      backgroundImage="linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)"
-    >
+    <MemeShare background="random">
       <Container>
         <AppleDots />
         <Title style={{ margin: 10 }} variant="h4">
