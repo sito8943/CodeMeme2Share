@@ -31,7 +31,7 @@ Title.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
   name: PropTypes.string,
-  style: PropTypes.objectOf(PropTypes.string),
+  style: PropTypes.objectOf(PropTypes.any),
   variant: PropTypes.string,
   children: PropTypes.node.isRequired,
 };

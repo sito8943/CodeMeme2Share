@@ -1,10 +1,11 @@
 {
   "name": "codememe2share",
-  "version": "1.0.0",
+  "version": "1.6.0",
   "description": "Do you want to make your cool code shorts public?",
   "main": "index.js",
   "dependencies": {
     "node-sass": "^7.0.1",
+    "random-int": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
