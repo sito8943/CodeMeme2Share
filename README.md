@@ -116,6 +116,7 @@ export default Template;
 ```
 
 ## Preview
+![preview](https://user-images.githubusercontent.com/40501794/158683035-f8ef383f-36f4-432d-be92-5488954d45f0.jpg)
 
 ### Additional Features
 
