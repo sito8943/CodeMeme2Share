@@ -117,8 +117,6 @@ export default Template;
 
 ## Preview
 
-![js](https://user-images.githubusercontent.com/40501794/158018430-169c3a3c-9cc1-4e44-9b5f-e42304fa74fe.jpg)
-
 ### Additional Features
 
 - Container <i>Flexible container component</i>
