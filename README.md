@@ -2,11 +2,16 @@
 
 Do you want to make your cool code shorts public?
 Just use:
-`yarn add codememe2share`
+
+```
+yarn add codememe2share
+```
 
 or
 
-```npm install codememe2share````
+```
+npm install codememe2share
+```
 
 ## Example:
 
