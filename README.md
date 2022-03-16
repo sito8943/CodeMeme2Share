@@ -72,7 +72,9 @@ How to add a simple <strong>Container</strong> component?
 ### Additional Features
 
 - Container <i>Flexible container component</i>
+  * Rotate <i>Container with rotation animation</i>
 - Title <i>Based on [MUI Typography](https://mui.com/components/typography) title component</i>
 - Paragraph <i>Based on [MUI Typography](https://mui.com/components/typography)</i> body component
 - Button <i>Flexible button component</i>
 - Icons from [React Icons](https://react-icons.github.io/react-icons/)
+- Gradients <i>Prefab gradients from [Gradient Backgrounds - Rainbow The Best Gradient Sites All In One Place](https://cssgradient.io/gradient-backgrounds/)</i>
