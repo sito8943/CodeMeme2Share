@@ -1,6 +1,6 @@
 {
   "name": "codememe2share",
-  "version": "1.6.0",
+  "version": "1.8.0",
   "description": "Do you want to make your cool code shorts public?",
   "main": "index.js",
   "dependencies": {
