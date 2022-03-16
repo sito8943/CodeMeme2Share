@@ -1,17 +1,18 @@
 # CodeMeme2Share@1.7.0
+
 Do you want to make your cool code shorts public?
 Just use:
-``yarn add codememe2share``
+`yarn add codememe2share`
 
 or
 
-``npm install codememe2share
+```npm install codememe2share````
 
 ## Example:
 
 Flexible container with gradient background and apple dots
 
-``
+```
   // components
   import MemeShare, { Container, AppleDots } from "./MemeShare";
 
@@ -21,23 +22,28 @@ Flexible container with gradient background and apple dots
         Put your code here
     </Container>
   </MemeShare>
-``
+```
 
 <i>Note: If you don't set the background it will take random gradient background</i>
 
 How to add a simple <strong>Container</strong> component?
-``
+
+```
   <Container>
     Hola Mundo
   </Container>
-``
+```
 
 ## Typography
+
 ### Font
 
 <i>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif</i>
+
 ### Font-Size
+
 <i>Based on [MUI Typography](https://mui.com/components/typography)</i>
+
 <h1>h1. Heading 6rem</h1>
 <h2>h2. Heading 3.75rem</h2>
 <h3>h3. Heading 3rem</h3>
@@ -50,20 +56,24 @@ How to add a simple <strong>Container</strong> component?
 ## Colors
 
 ### Gradient
+
 <i>Based on [Gradient Backgrounds - Rainbow The Best Gradient Sites All In One Place](https://cssgradient.io/gradient-backgrounds/)</i>
 
 ### Apple dots
-``.red svg {
+
+```
+.red svg {
   color: #ff5d56;
-}``
+}
+```
 
-``.yellow svg {
-  color: #f7c127;
-}``
+```
+.yellow svg { color: #f7c127; }
+```
 
-``.green svg {
-  color: #2bcb45;
-}``
+```
+.green svg { color: #2bcb45; }
+```
 
 ## Preview
 
@@ -72,7 +82,7 @@ How to add a simple <strong>Container</strong> component?
 ### Additional Features
 
 - Container <i>Flexible container component</i>
-  * Rotate <i>Container with rotation animation</i>
+  - Rotate <i>Container with rotation animation</i>
 - Title <i>Based on [MUI Typography](https://mui.com/components/typography) title component</i>
 - Paragraph <i>Based on [MUI Typography](https://mui.com/components/typography)</i> body component
 - Button <i>Flexible button component</i>
