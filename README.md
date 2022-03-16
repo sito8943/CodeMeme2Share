@@ -1,19 +1,40 @@
-# CodeMeme2Share
+# CodeMeme2Share@1.7.0
 Do you want to make your cool code shorts public?
+Just use:
+``yarn add codememe2share``
 
-## How to run
+or
 
-### Install dependencies
+``npm install codememe2share
 
-``yarn install``
+## Example:
 
-### Run
+Flexible container with gradient background and apple dots
 
-``yarn start``
+``
+  // components
+  import MemeShare, { Container, AppleDots } from "./MemeShare";
+
+  <MemeShare>
+    <Container>
+      <AppleDots />
+        Put your code here
+    </Container>
+  </MemeShare>
+``
+
+<i>Note: If you don't set the background it will take random gradient background</i>
+
+How to add a simple <strong>Container</strong> component?
+``
+  <Container>
+    Hola Mundo
+  </Container>
+``
 
 ## Typography
-
 ### Font
+
 <i>font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif</i>
 ### Font-Size
 <i>Based on [MUI Typography](https://mui.com/components/typography)</i>
