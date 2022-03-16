@@ -116,6 +116,8 @@ export default Template;
 ```
 
 ## Preview
+![Uploading Untitled-1.jpg…]()
+
 
 ### Additional Features
 
