@@ -21,6 +21,8 @@ const Container = (props) => {
     padding,
     backdropFilter,
     borderRadius,
+    animation,
+    ignoreDefault,
   } = props;
 
   const emotionCss = css({
@@ -29,15 +31,16 @@ const Container = (props) => {
     flexDirection,
     padding,
     backdropFilter,
-    "-webkit-backdrop-filter": backdropFilter,
+    WebkitBackdropFilter: backdropFilter,
     borderRadius,
+    animation,
   });
 
   return (
     <div
       id={id}
       name={name}
-      className={className !== "" ? className : emotionCss}
+      className={`${className} ${!ignoreDefault ? emotionCss : ""}`}
       style={style}
     >
       {children}
@@ -56,6 +59,8 @@ Container.defaultProps = {
   padding: "1rem",
   backdropFilter: "blur(4px)",
   borderRadius: "1rem",
+  animation: "",
+  ignoreDefault: false,
 };
 
 Container.propTypes = {
@@ -70,6 +75,8 @@ Container.propTypes = {
   padding: PropTypes.string,
   backdropFilter: PropTypes.string,
   borderRadius: PropTypes.string,
+  animation: PropTypes.string,
+  ignoreDefault: PropTypes.bool,
 };
 
 export default Container;

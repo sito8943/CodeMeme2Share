@@ -26,10 +26,12 @@ const Rotate = (props) => {
       id={id}
       className={className}
       name={name}
-      style={{
-        ...style,
-        animation: `${direction} ${delay} ${loop} ${iteration}`,
-      }}
+      style={style}
+      background="none"
+      padding="0"
+      flexDirection="default"
+      backdropFilter="none"
+      animation={`${direction} ${delay} ${loop} ${iteration}`}
     >
       {children}
     </Container>
@@ -43,7 +45,7 @@ Rotate.defaultProps = {
   iteration: "linear",
   id: "",
   className: "",
-  style: "",
+  style: {},
   name: "",
 };
 
