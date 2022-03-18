@@ -9,32 +9,10 @@ import { css } from "@emotion/css";
 import "./style.scss";
 
 const Container = (props) => {
-  const {
-    children,
-    id,
-    className,
-    name,
-    style,
-    display,
-    flexDirection,
-    background,
-    padding,
-    backdropFilter,
-    borderRadius,
-    animation,
-    ignoreDefault,
-  } = props;
+  const { children, id, className, name, style, options, ignoreDefault } =
+    props;
 
-  const emotionCss = css({
-    background,
-    display,
-    flexDirection,
-    padding,
-    backdropFilter,
-    WebkitBackdropFilter: backdropFilter,
-    borderRadius,
-    animation,
-  });
+  const emotionCss = css(options);
 
   return (
     <div
@@ -53,13 +31,15 @@ Container.defaultProps = {
   id: "",
   name: "",
   style: {},
-  display: "flex",
-  flexDirection: "column",
-  background: "#2223338c",
-  padding: "1rem",
-  backdropFilter: "blur(4px)",
-  borderRadius: "1rem",
-  animation: "",
+  options: {
+    display: "flex",
+    flexDirection: "column",
+    background: "#2223338c",
+    padding: "1rem",
+    backdropFilter: "blur(4px)",
+    borderRadius: "1rem",
+    animation: "",
+  },
   ignoreDefault: false,
 };
 
@@ -69,13 +49,7 @@ Container.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
-  display: PropTypes.string,
-  flexDirection: PropTypes.string,
-  background: PropTypes.string,
-  padding: PropTypes.string,
-  backdropFilter: PropTypes.string,
-  borderRadius: PropTypes.string,
-  animation: PropTypes.string,
+  options: PropTypes.objectOf(PropTypes.string),
   ignoreDefault: PropTypes.bool,
 };
 

@@ -27,11 +27,7 @@ const Rotate = (props) => {
       className={className}
       name={name}
       style={style}
-      background="none"
-      padding="0"
-      flexDirection="default"
-      backdropFilter="none"
-      animation={`${direction} ${delay} ${loop} ${iteration}`}
+      options={{ animation: `${direction} ${delay} ${loop} ${iteration}` }}
     >
       {children}
     </Container>
