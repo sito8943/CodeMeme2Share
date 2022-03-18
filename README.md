@@ -1,4 +1,4 @@
-npm# CodeMeme2Share@1.9.2
+npm# CodeMeme2Share@1.9.3
 
 Do you want to make your cool code shorts public?
 Just use:
@@ -19,7 +19,7 @@ Flexible container with gradient background and apple dots
 
 ```
   // components
-  import MemeShare, { Container, AppleDots } from "./MemeShare";
+  import MemeShare, { Container, AppleDots } from "codememe2share";
 
   <MemeShare>
     <Container>
@@ -34,6 +34,9 @@ Flexible container with gradient background and apple dots
 How to add a simple <strong>Container</strong> component?
 
 ```
+  // components
+  import Container from "codememe2share/Container";
+
   <Container>
     Hola Mundo
   </Container>
@@ -90,7 +93,7 @@ How to add a simple <strong>Container</strong> component?
 import React from "react";
 
 // components
-import MemeShare, { Container, AppleDots, Title } from "./MemeShare";
+import MemeShare, { Container, AppleDots, Title } from "codememe2share";
 
 // images
 import react from "./assets/images/logo512.png";
