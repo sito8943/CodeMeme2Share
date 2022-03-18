@@ -1,8 +1,8 @@
 {
   "name": "codememe2share",
-  "version": "1.8.6",
+  "version": "1.8.7",
   "description": "Do you want to make your cool code shorts public?",
-  "main": "index.js",
+  "main": "src/index.js",
   "dependencies": {
     "node-sass": "^7.0.1",
     "random-int": "^3.0.0",
