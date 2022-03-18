@@ -1,7 +1,7 @@
 import React from "react";
 
 // components
-import MemeShare, { Container, AppleDots, Title } from "./MemeShare";
+import MemeShare, { Container, AppleDots, Title } from "./App";
 
 // images
 import react from "./assets/images/logo512.png";

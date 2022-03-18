@@ -2,8 +2,9 @@
   "name": "codememe2share",
   "version": "1.9.4",
   "description": "Do you want to make your cool code shorts public?",
-  "main": "dist/index.js",
+  "main": "index.js",
   "dependencies": {
+    "@emotion/css": "^11.7.1",
     "node-sass": "^7.0.1",
     "random-int": "^3.0.0",
     "react": "^17.0.2",

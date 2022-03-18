@@ -1,9 +1,9 @@
-import React, { Children } from "react";
+import React from "react";
 
 import PropTypes from "prop-types";
 
 // own component
-import { Container } from "../../../MemeShare";
+import Container from "../Container";
 
 // styles
 import "./style.scss";
@@ -21,7 +21,6 @@ const Rotate = (props) => {
     name,
   } = props;
 
-  console.log(`animation: ${direction} ${delay} ${loop} ${iteration}`);
   return (
     <Container
       id={id}
