@@ -1,4 +1,4 @@
-npm# CodeMeme2Share@1.9.3
+npm# CodeMeme2Share@1.9.4
 
 Do you want to make your cool code shorts public?
 Just use:
@@ -35,7 +35,7 @@ How to add a simple <strong>Container</strong> component?
 
 ```
   // components
-  import Container from "codememe2share/Container";
+  import Container from "codememe2share/components/Container";
 
   <Container>
     Hola Mundo
