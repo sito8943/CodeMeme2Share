@@ -1,24 +1,21 @@
 import randomInteger from "random-int";
-
 import Paragraph from "./components/Typography/Paragraph/Paragraph";
 import Title from "./components/Typography/Title/Title";
 import Container from "./components/Container/Container";
 import Button from "./components/Button/Button";
 import Icon from "./components/Icons/Icons";
 import AppleDots from "./components/AppleDots/AppleDots";
+import PropTypes from "prop-types"; // global styles
 
-import PropTypes from "prop-types";
-
-// global styles
 import "./assets/theme/colors.scss";
 import "./assets/theme/iconSizes.scss";
 import "./assets/theme/animations.scss";
-import * as gradients from "./assets/theme/gradients";
+import * as gradients from "./assets/theme/gradients"; // local styles
 
-// local styles
 import "./style.scss";
+import { jsx as _jsx } from "react/jsx-runtime";
 
-const MemeShare = (props) => {
+const MemeShare = props => {
   const {
     backgroundColor,
     backgroundImage,
@@ -27,7 +24,7 @@ const MemeShare = (props) => {
     className,
     name,
     style,
-    children,
+    children
   } = props;
 
   if (background === "random") {
@@ -43,31 +40,25 @@ const MemeShare = (props) => {
     style.backgroundImage = backgroundImage;
   }
 
-  return (
-    <div
-      id={id}
-      className={className}
-      name={name}
-      style={{
-        ...style,
-      }}
-    >
-      {children}
-    </div>
-  );
+  return /*#__PURE__*/_jsx("div", {
+    id: id,
+    className: className,
+    name: name,
+    style: { ...style
+    },
+    children: children
+  });
 };
 
 MemeShare.defaultProps = {
   backgroundColor: "#4158D0",
-  backgroundImage:
-    "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
+  backgroundImage: "linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)",
   background: "",
   className: "meme-share",
   id: "",
   name: "",
-  style: {},
+  style: {}
 };
-
 MemeShare.propTypes = {
   backgroundColor: PropTypes.string,
   backgroundImage: PropTypes.string,
@@ -76,9 +67,7 @@ MemeShare.propTypes = {
   style: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,
   id: PropTypes.string,
-  name: PropTypes.string,
+  name: PropTypes.string
 };
-
 export { Paragraph, Title, Container, Button, Icon, AppleDots };
-
 export default MemeShare;

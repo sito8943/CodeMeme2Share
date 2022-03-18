@@ -1,8 +1,9 @@
 {
   "name": "codememe2share",
-  "version": "1.8.7",
+  "version": "1.9.2",
   "description": "Do you want to make your cool code shorts public?",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "private": "false",
   "dependencies": {
     "node-sass": "^7.0.1",
     "random-int": "^3.0.0",
@@ -15,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish:npm": "babel src/ -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +45,9 @@
   ],
   "author": "Sito",
   "license": "ISC",
-  "repository": "https://github.com/SitoNumbis/CodeMeme2Share.git"
+  "repository": "https://github.com/SitoNumbis/CodeMeme2Share.git",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/preset-react": "^7.16.7"
+  }
 }
