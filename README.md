@@ -1,4 +1,4 @@
-# CodeMeme2Share@1.8.6
+npm# CodeMeme2Share@1.9.2
 
 Do you want to make your cool code shorts public?
 Just use:
