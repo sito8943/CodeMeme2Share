@@ -5,9 +5,6 @@ import PropTypes from "prop-types";
 // own component
 import Container from "../Container";
 
-// styles
-import "./style.scss";
-
 const Rotate = (props) => {
   const {
     children,

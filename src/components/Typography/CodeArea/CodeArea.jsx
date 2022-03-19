@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // emotion
-import { css } from "emotion/css";
+import { css } from "@emotion/css";
 
 // style
 import "./style.scss";
