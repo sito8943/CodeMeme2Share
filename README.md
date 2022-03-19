@@ -1,4 +1,4 @@
-npm# CodeMeme2Share@1.9.12
+npm# CodeMeme2Share@1.9.13
 
 Do you want to make your cool code shorts public?
 Just use:
@@ -127,6 +127,7 @@ export default Template;
   - Rotate <i>Container with rotation animation</i>
 - Title <i>Based on [MUI Typography](https://mui.com/components/typography) title component</i>
 - Paragraph <i>Based on [MUI Typography](https://mui.com/components/typography)</i> body component
+  - CodeArea <strong>Beta</strong> <i>Colorized code for everyone</i>
 - Button <i>Flexible button component</i>
 - Icons from [React Icons](https://react-icons.github.io/react-icons/)
 - Gradients <i>Prefab gradients from [Gradient Backgrounds - Rainbow The Best Gradient Sites All In One Place](https://cssgradient.io/gradient-backgrounds/)</i>
