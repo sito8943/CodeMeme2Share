@@ -2,14 +2,31 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
+// emotion
+import { css } from "emotion";
+
 // style
 import "./style.scss";
 
 const Title = (props) => {
-  const { id, className, style, name, variant, children } = props;
+  const {
+    id,
+    className,
+    style,
+    name,
+    variant,
+    children,
+    options,
+    ignoreDefault,
+  } = props;
+
+  const emotionCss = css({
+    options,
+  });
+
   return (
     <div
-      className={`${variant} ${className}`}
+      className={`${variant} ${className} ${!ignoreDefault ? emotionCss : ""}`}
       style={style}
       id={id}
       name={name}
@@ -25,6 +42,11 @@ Title.defaultProps = {
   style: {},
   name: "",
   variant: "h1",
+  options: {
+    color: "aliceblue",
+    fontWeight: "bold",
+  },
+  ignoreDefault: false,
 };
 
 Title.propTypes = {
@@ -34,6 +56,8 @@ Title.propTypes = {
   style: PropTypes.objectOf(PropTypes.any),
   variant: PropTypes.string,
   children: PropTypes.node.isRequired,
+  options: PropTypes.objectOf(PropTypes.string),
+  ignoreDefault: PropTypes.bool,
 };
 
 export default Title;

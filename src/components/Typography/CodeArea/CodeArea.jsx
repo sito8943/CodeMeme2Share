@@ -3,12 +3,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 // emotion
-import { css } from "emotion";
+import { css } from "emotion/css";
 
 // style
 import "./style.scss";
 
-const Paragraph = (props) => {
+const CodeArea = (props) => {
   const { id, className, style, name, children, options, ignoreDefault } =
     props;
 
@@ -28,19 +28,24 @@ const Paragraph = (props) => {
   );
 };
 
-Paragraph.defaultProps = {
+CodeArea.defaultProps = {
   id: "",
   className: "",
   style: {},
   name: "",
   options: {
-    fontSize: "1rem",
+    background: "#22233387",
+    padding: "20px",
+    borderRadius: "1rem",
+    backdropFilter: "blur(5px)",
+    WebkitBackdropFilter: "blur(5px)",
     color: "aliceblue",
+    fontSize: "1.2rem",
   },
   ignoreDefault: false,
 };
 
-Paragraph.propTypes = {
+CodeArea.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
   name: PropTypes.string,
@@ -50,4 +55,4 @@ Paragraph.propTypes = {
   ignoreDefault: PropTypes.bool,
 };
 
-export default Paragraph;
+export default CodeArea;

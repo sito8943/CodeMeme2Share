@@ -37,6 +37,7 @@ Container.defaultProps = {
     background: "#2223338c",
     padding: "1rem",
     backdropFilter: "blur(4px)",
+    WebKitBackdropFilter: "blur(4px)",
     borderRadius: "1rem",
     animation: "",
   },
