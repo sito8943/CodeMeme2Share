@@ -1,6 +1,6 @@
 import React from "react"; // components
 
-import MemeShare, { Container, AppleDots, Title } from "./MemeShare"; // images
+import MemeShare, { Container, AppleDots, Title, Button } from "./App"; // images
 
 import react from "./assets/images/logo512.png";
 import Rotate from "./components/Container/Rotate/Rotate";
@@ -26,6 +26,8 @@ const Template = () => {
           },
           alt: "react-logo"
         })
+      }), /*#__PURE__*/_jsx(Button, {
+        children: "Hola"
       })]
     })
   });

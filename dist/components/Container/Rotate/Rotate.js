@@ -1,9 +1,7 @@
-import React, { Children } from "react";
+import React from "react";
 import PropTypes from "prop-types"; // own component
 
-import { Container } from "../../../MemeShare"; // styles
-
-import "./style.scss";
+import Container from "../Container";
 import { jsx as _jsx } from "react/jsx-runtime";
 
 const Rotate = props => {
@@ -18,12 +16,12 @@ const Rotate = props => {
     style,
     name
   } = props;
-  console.log(`animation: ${direction} ${delay} ${loop} ${iteration}`);
   return /*#__PURE__*/_jsx(Container, {
     id: id,
     className: className,
     name: name,
-    style: { ...style,
+    style: style,
+    options: {
       animation: `${direction} ${delay} ${loop} ${iteration}`
     },
     children: children
@@ -37,7 +35,7 @@ Rotate.defaultProps = {
   iteration: "linear",
   id: "",
   className: "",
-  style: "",
+  style: {},
   name: ""
 };
 Rotate.propTypes = {

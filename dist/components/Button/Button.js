@@ -1,5 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types"; // styles
+import PropTypes from "prop-types"; // emotion
+
+import { css } from "@emotion/css"; // styles
 
 import "./style.scss";
 import { jsx as _jsx } from "react/jsx-runtime";
@@ -11,12 +13,15 @@ const Button = props => {
     className,
     name,
     style,
-    type
+    type,
+    options,
+    ignoreDefault
   } = props;
+  const emotionCss = css(options);
   return /*#__PURE__*/_jsx("button", {
     type: type,
     id: id,
-    className: className,
+    className: `${className} ${!ignoreDefault ? emotionCss : ""}`,
     name: name,
     style: style,
     children: children
@@ -24,11 +29,26 @@ const Button = props => {
 };
 
 Button.defaultProps = {
-  className: "ms-button",
+  className: "",
   id: "",
   name: "",
   style: {},
-  type: "button"
+  options: {
+    fontSize: "0.875rem",
+    cursor: "pointer",
+    backgroundColor: "#2223335e",
+    border: "1px solid #22233366",
+    backdropFilter: "blur(4px)",
+    padding: "10px",
+    borderRadius: "0.5rem",
+    color: "aliceblue",
+    "&:hover": {
+      backgroundColor: "#6e3b70",
+      border: "1px solid #6e3b70"
+    }
+  },
+  type: "button",
+  ignoreDefault: false
 };
 Button.propTypes = {
   children: PropTypes.node.isRequired,
@@ -36,6 +56,8 @@ Button.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
-  type: PropTypes.string
+  type: PropTypes.string,
+  options: PropTypes.objectOf(PropTypes.string),
+  ignoreDefault: PropTypes.bool
 };
 export default Button;
