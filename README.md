@@ -1,4 +1,4 @@
-npm# CodeMeme2Share@1.9.4
+npm# CodeMeme2Share@1.9.12
 
 Do you want to make your cool code shorts public?
 Just use:
@@ -93,11 +93,10 @@ How to add a simple <strong>Container</strong> component?
 import React from "react";
 
 // components
-import MemeShare, { Container, AppleDots, Title } from "codememe2share";
+import MemeShare, { Container, AppleDots, Title, Rotate } from "codememe2share";
 
 // images
 import react from "./assets/images/logo512.png";
-import Rotate from "./components/Container/Rotate/Rotate";
 
 const Template = () => {
   return (

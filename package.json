@@ -1,6 +1,6 @@
 {
   "name": "codememe2share",
-  "version": "1.9.10",
+  "version": "1.9.12",
   "description": "Do you want to make your cool code shorts public?",
   "main": "index.js",
   "dependencies": {
@@ -41,7 +41,8 @@
     "meme",
     "react",
     "share",
-    "css"
+    "css",
+    "@emotion/css"
   ],
   "author": "Sito",
   "license": "ISC",
