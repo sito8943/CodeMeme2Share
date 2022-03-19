@@ -57,7 +57,7 @@ Button.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.string,
-  options: PropTypes.objectOf(PropTypes.string),
+  options: PropTypes.objectOf(PropTypes.any),
   ignoreDefault: PropTypes.bool,
 };
 

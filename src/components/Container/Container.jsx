@@ -50,7 +50,7 @@ Container.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
-  options: PropTypes.objectOf(PropTypes.string),
+  options: PropTypes.objectOf(PropTypes.any),
   ignoreDefault: PropTypes.bool,
 };
 

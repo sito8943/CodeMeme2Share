@@ -56,7 +56,7 @@ Title.propTypes = {
   style: PropTypes.objectOf(PropTypes.any),
   variant: PropTypes.string,
   children: PropTypes.node.isRequired,
-  options: PropTypes.objectOf(PropTypes.string),
+  options: PropTypes.objectOf(PropTypes.any),
   ignoreDefault: PropTypes.bool,
 };
 

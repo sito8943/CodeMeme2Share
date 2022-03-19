@@ -46,7 +46,7 @@ Paragraph.propTypes = {
   name: PropTypes.string,
   style: PropTypes.objectOf(PropTypes.any),
   children: PropTypes.node.isRequired,
-  options: PropTypes.objectOf(PropTypes.string),
+  options: PropTypes.objectOf(PropTypes.any),
   ignoreDefault: PropTypes.bool,
 };
 

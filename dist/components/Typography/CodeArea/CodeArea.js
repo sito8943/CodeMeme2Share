@@ -6,25 +6,18 @@ import { css } from "@emotion/css"; // style
 import "./style.scss";
 import { jsx as _jsx } from "react/jsx-runtime";
 
-const CodeArea = props => {
-  const {
-    id,
-    className,
-    style,
-    name,
-    children,
-    options,
-    ignoreDefault
-  } = props;
+const CodeArea = (props) => {
+  const { id, className, style, name, children, options, ignoreDefault } =
+    props;
   const emotionCss = css({
-    options
+    options,
   });
-  return /*#__PURE__*/_jsx("p", {
+  return /*#__PURE__*/ _jsx("p", {
     className: `${className} ${!ignoreDefault ? emotionCss : ""}`,
     style: style,
     id: id,
     name: name,
-    children: children
+    children: children,
   });
 };
 
@@ -40,9 +33,9 @@ CodeArea.defaultProps = {
     backdropFilter: "blur(5px)",
     WebkitBackdropFilter: "blur(5px)",
     color: "aliceblue",
-    fontSize: "1.2rem"
+    fontSize: "1.2rem",
   },
-  ignoreDefault: false
+  ignoreDefault: false,
 };
 CodeArea.propTypes = {
   id: PropTypes.string,
@@ -50,7 +43,7 @@ CodeArea.propTypes = {
   name: PropTypes.string,
   style: PropTypes.objectOf(PropTypes.any),
   children: PropTypes.node.isRequired,
-  options: PropTypes.objectOf(PropTypes.string),
-  ignoreDefault: PropTypes.bool
+  options: PropTypes.objectOf(PropTypes.any),
+  ignoreDefault: PropTypes.bool,
 };
 export default CodeArea;
