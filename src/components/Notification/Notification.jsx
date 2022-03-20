@@ -26,17 +26,26 @@ const Notification = (props) => {
     text,
     delay,
     visible,
+    needToClose,
+    position,
   } = props;
 
   const emotionCss = css(options);
 
+  const prefabPositions = {
+    right: css({ position: "fixed", right: 5 }),
+    up: css({ position: "fixed", top: 5 }),
+    down: css({ position: "fixed", down: 5 }),
+    left: css({ position: "fixed", left: 5 }),
+    "right-down": css({ position: "fixed", bottom: 5, right: 5 }),
+    "right-up": css({ position: "fixed", top: 5, right: 5 }),
+    "left-down": css({ position: "fixed", bottom: 5, left: 5 }),
+    "left-up": css({ position: "fixed", top: 5, right: 5 }),
+  };
+
   const buttonArea = css({
     margin: "-10px -8px 10px 10px",
   });
-
-  const [afterDelay, setAfterDelay] = useState(false);
-
-  useEffect(() => {}, [visible]);
 
   const closeButton = css({
     background: "white",
@@ -51,10 +60,25 @@ const Notification = (props) => {
     },
   });
 
+  const [afterDelay, setAfterDelay] = useState(false);
+
+  useEffect(() => {
+    if (delay > 0)
+      setTimeout(() => {
+        setAfterDelay(true);
+      }, delay);
+  }, [visible, delay]);
+
+  const close = () => {
+    setAfterDelay(true);
+  };
+
   return (
     <Container
       id={id}
-      className={`${className} ${!ignoreDefault ? emotionCss : ""}`}
+      className={`${className} ${!ignoreDefault ? emotionCss : ""} ${
+        prefabPositions[position]
+      }`}
       name={name}
       style={{
         ...style,
@@ -67,11 +91,13 @@ const Notification = (props) => {
         <Title variant="h3">{title}</Title>
         <Paragraph>{text}</Paragraph>
       </Container>
-      <Container className={buttonArea} ignoreDefault>
-        <Button ignoreDefault className={closeButton}>
-          <XIcon color="red" />
-        </Button>
-      </Container>
+      {needToClose && (
+        <Container className={buttonArea} ignoreDefault>
+          <Button action={close} className={closeButton} ignoreDefault>
+            <XIcon color="red" />
+          </Button>
+        </Container>
+      )}
     </Container>
   );
 };
@@ -93,7 +119,9 @@ Notification.defaultProps = {
   ignoreDefault: false,
   title: "",
   text: "",
-  delay: 5,
+  delay: 5000,
+  needToClose: true,
+  position: "right-down",
 };
 
 Notification.propTypes = {
@@ -106,6 +134,9 @@ Notification.propTypes = {
   title: PropTypes.string,
   text: PropTypes.string,
   delay: PropTypes.number,
+  needToClose: PropTypes.bool,
+  visible: PropTypes.bool.isRequired,
+  position: PropTypes.string,
 };
 
 export default Notification;

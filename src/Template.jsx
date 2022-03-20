@@ -16,9 +16,14 @@ import Rotate from "./components/Container/Rotate/Rotate";
 const Template = () => {
   return (
     <MemeShare background="random">
+      <Notification
+        title="Notification"
+        text="This is a notification"
+        visible={true}
+        delay={0}
+      />
       <Container>
         <AppleDots />
-        <Notification title="Notification" text="This is a notification" />
       </Container>
     </MemeShare>
   );
