@@ -1,15 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types"; // components
-
-import FileButton from "./FileButton/FileButton";
-import LinkButton from "./LinkButton/LinkButton"; // emotion
+import PropTypes from "prop-types"; // emotion
 
 import { css } from "@emotion/css"; // styles
 
 import "./style.scss";
 import { jsx as _jsx } from "react/jsx-runtime";
 
-const Button = props => {
+const LinkButton = props => {
   const {
     children,
     id,
@@ -19,13 +16,17 @@ const Button = props => {
     type,
     options,
     ignoreDefault,
-    action,
     mouseOver,
-    mouseLeave
+    mouseLeave,
+    link,
+    target,
+    rel
   } = props;
   const emotionCss = css(options);
-  return /*#__PURE__*/_jsx("button", {
-    onClick: action,
+  return /*#__PURE__*/_jsx("a", {
+    href: link,
+    target: target,
+    rel: rel,
     onMouseEnter: mouseOver,
     onMouseLeave: mouseLeave,
     type: type,
@@ -37,7 +38,7 @@ const Button = props => {
   });
 };
 
-Button.defaultProps = {
+LinkButton.defaultProps = {
   className: "",
   id: "",
   name: "",
@@ -60,9 +61,11 @@ Button.defaultProps = {
   ignoreDefault: false,
   action: null,
   mouseOver: null,
-  mouseLeave: null
+  mouseLeave: null,
+  target: "_blank",
+  rel: "noopener noreferrer"
 };
-Button.propTypes = {
+LinkButton.propTypes = {
   children: PropTypes.node.isRequired,
   style: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,
@@ -71,9 +74,10 @@ Button.propTypes = {
   type: PropTypes.string,
   options: PropTypes.objectOf(PropTypes.any),
   ignoreDefault: PropTypes.bool,
-  action: PropTypes.func,
   mouseOver: PropTypes.func,
-  mouseLeave: PropTypes.func
+  mouseLeave: PropTypes.func,
+  link: PropTypes.string.isRequired,
+  target: PropTypes.string,
+  rel: PropTypes.string
 };
-export { FileButton, LinkButton };
-export default Button;
+export default LinkButton;

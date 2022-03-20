@@ -2,6 +2,10 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
+// components
+import FileButton from "./FileButton/FileButton";
+import LinkButton from "./LinkButton/LinkButton";
+
 // emotion
 import { css } from "@emotion/css";
 
@@ -80,5 +84,7 @@ Button.propTypes = {
   mouseOver: PropTypes.func,
   mouseLeave: PropTypes.func,
 };
+
+export { FileButton, LinkButton };
 
 export default Button;
