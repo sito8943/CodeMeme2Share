@@ -5,8 +5,9 @@ import { css } from "@emotion/css"; // styles
 
 import "./style.scss";
 import { jsx as _jsx } from "react/jsx-runtime";
+import { jsxs as _jsxs } from "react/jsx-runtime";
 
-const Button = props => {
+const FileButton = props => {
   const {
     children,
     id,
@@ -18,11 +19,11 @@ const Button = props => {
     ignoreDefault,
     action,
     mouseOver,
-    mouseLeave
+    mouseLeave,
+    accept
   } = props;
   const emotionCss = css(options);
-  return /*#__PURE__*/_jsx("button", {
-    onClick: action,
+  return /*#__PURE__*/_jsxs("label", {
     onMouseEnter: mouseOver,
     onMouseLeave: mouseLeave,
     type: type,
@@ -30,11 +31,17 @@ const Button = props => {
     className: `${className} ${!ignoreDefault ? emotionCss : ""}`,
     name: name,
     style: style,
-    children: children
+    children: [/*#__PURE__*/_jsx("input", {
+      type: "file",
+      id: `file${id}`,
+      name: `file${name}`,
+      accept: accept,
+      onChange: action
+    }), children]
   });
 };
 
-Button.defaultProps = {
+FileButton.defaultProps = {
   className: "",
   id: "",
   name: "",
@@ -53,13 +60,14 @@ Button.defaultProps = {
       border: "1px solid #6e3b70"
     }
   },
-  type: "button",
+  type: "FileButton",
   ignoreDefault: false,
   action: null,
   mouseOver: null,
-  mouseLeave: null
+  mouseLeave: null,
+  accept: ".txt"
 };
-Button.propTypes = {
+FileButton.propTypes = {
   children: PropTypes.node.isRequired,
   style: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,
@@ -70,6 +78,7 @@ Button.propTypes = {
   ignoreDefault: PropTypes.bool,
   action: PropTypes.func,
   mouseOver: PropTypes.func,
-  mouseLeave: PropTypes.func
+  mouseLeave: PropTypes.func,
+  accept: PropTypes.string
 };
-export default Button;
+export default FileButton;
