@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types"; // emotion
 
-import { css } from "@emotion/css";
+import { css } from "@emotion/css"; // styles
+
+import "./style.scss";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
 
@@ -32,6 +34,7 @@ const FileButton = props => {
     children: [/*#__PURE__*/_jsx("input", {
       type: "file",
       id: `file${id}`,
+      className: "file-input",
       name: `file${name}`,
       accept: accept,
       onChange: action
@@ -45,6 +48,7 @@ FileButton.defaultProps = {
   name: "",
   style: {},
   options: {
+    textAlign: "center",
     fontSize: "0.875rem",
     cursor: "pointer",
     backgroundColor: "#2223335e",
