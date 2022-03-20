@@ -9,13 +9,27 @@ import { css } from "@emotion/css";
 import "./style.scss";
 
 const Button = (props) => {
-  const { children, id, className, name, style, type, options, ignoreDefault } =
-    props;
+  const {
+    children,
+    id,
+    className,
+    name,
+    style,
+    type,
+    options,
+    ignoreDefault,
+    action,
+    mouseOver,
+    mouseLeave,
+  } = props;
 
   const emotionCss = css(options);
 
   return (
     <button
+      onClick={action}
+      onMouseEnter={mouseOver}
+      onMouseLeave={mouseLeave}
       type={type}
       id={id}
       className={`${className} ${!ignoreDefault ? emotionCss : ""}`}
@@ -48,6 +62,9 @@ Button.defaultProps = {
   },
   type: "button",
   ignoreDefault: false,
+  action: null,
+  mouseOver: null,
+  mouseLeave: null,
 };
 
 Button.propTypes = {
@@ -59,6 +76,9 @@ Button.propTypes = {
   type: PropTypes.string,
   options: PropTypes.objectOf(PropTypes.any),
   ignoreDefault: PropTypes.bool,
+  action: PropTypes.func,
+  mouseOver: PropTypes.func,
+  mouseLeave: PropTypes.func,
 };
 
 export default Button;
