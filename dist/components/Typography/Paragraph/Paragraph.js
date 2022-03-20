@@ -16,9 +16,7 @@ const Paragraph = props => {
     options,
     ignoreDefault
   } = props;
-  const emotionCss = css({
-    options
-  });
+  const emotionCss = css(options);
   return /*#__PURE__*/_jsx("p", {
     className: `${className} ${!ignoreDefault ? emotionCss : ""}`,
     style: style,

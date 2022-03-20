@@ -1,4 +1,5 @@
-import randomInteger from "random-int";
+import randomInteger from "random-int"; // components
+
 import Paragraph from "./components/Typography/Paragraph/Paragraph";
 import Title from "./components/Typography/Title/Title";
 import Container from "./components/Container/Container";
@@ -6,6 +7,7 @@ import Button from "./components/Button/Button";
 import FileButton from "./components/Button/FileButton/FileButton";
 import Icon from "./components/Icons/Icons";
 import AppleDots from "./components/AppleDots/AppleDots";
+import Notification from "./components/Notification/Notification";
 import PropTypes from "prop-types"; // global styles
 
 import "./assets/theme/colors.scss";
@@ -70,5 +72,5 @@ MemeShare.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string
 };
-export { Paragraph, Title, Container, FileButton, Button, Icon, AppleDots };
+export { Paragraph, Title, Container, FileButton, Button, Icon, AppleDots, Notification };
 export default MemeShare;
