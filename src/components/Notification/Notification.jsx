@@ -12,24 +12,35 @@ import { css } from "@emotion/css";
 
 // styles
 import "./style.scss";
-import { XIcon } from "../Icons/Icons";
+import Icon, { XIcon } from "../Icons/Icons";
 
 const Notification = (props) => {
   const {
+    style,
+    options,
     id,
     className,
-    style,
     name,
-    options,
-    ignoreDefault,
     title,
     text,
+    position,
+    icon,
     delay,
+    maxWidth,
+    ignoreDefault,
     visible,
     needToClose,
-    position,
-    maxWidth,
   } = props;
+
+  const icons = {
+    error: "filledcirclexicon",
+    wrong: "filledcirclexicon",
+    good: "filledcirclecheckicon",
+    ok: "filledcirclecheckicon",
+    warning: "filledcircleexclamationicon",
+    info: "filledcircleinfoicon",
+    question: "filledcircleinfoicon",
+  };
 
   const emotionCss = css({ ...options, maxWidth });
 
@@ -43,6 +54,20 @@ const Notification = (props) => {
     "left-down": css({ position: "fixed", bottom: 5, left: 5 }),
     "left-up": css({ position: "fixed", top: 5, right: 5 }),
   };
+
+  const prefabIcons = {
+    error: "rgb(218, 34, 70)",
+    wrong: "rgb(218, 34, 70)",
+    good: "green",
+    ok: "green",
+    warning: "rgb(202, 202, 4)",
+    info: "rgb(21, 21, 247)",
+    question: "rgb(21, 21, 247)",
+  };
+
+  const iconContainer = css({
+    margin: "5px 10px 0 0",
+  });
 
   const buttonArea = css({
     margin: "0 -8px 10px 10px",
@@ -89,7 +114,12 @@ const Notification = (props) => {
       }}
       ignoreDefault
     >
-      <Container className="text-area" ignoreDefault>
+      {icon !== "" && (
+        <Container ignoreDefault className={iconContainer}>
+          <Icon icon={icons[icon]} size="x-large" color={prefabIcons[icon]} />
+        </Container>
+      )}
+      <Container ignoreDefault>
         <Title variant="h5">{title}</Title>
         <Paragraph>{text}</Paragraph>
       </Container>
@@ -121,6 +151,7 @@ Notification.defaultProps = {
   title: "",
   text: "",
   position: "right-down",
+  icon: "warning",
   delay: 5000,
   maxWidth: 400,
   ignoreDefault: false,
@@ -136,6 +167,7 @@ Notification.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   position: PropTypes.string,
+  icon: PropTypes.string,
   delay: PropTypes.number,
   maxWidth: PropTypes.number,
   needToClose: PropTypes.bool,

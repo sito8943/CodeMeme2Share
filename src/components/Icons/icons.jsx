@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
 
+// emotion
+import { css } from "@emotion/css";
+
 import {
   BsArrowRight,
   BsFillRecordFill,
@@ -11,6 +14,23 @@ import {
   BsXOctagon,
   BsXSquare,
   BsX,
+  BsFillExclamationCircleFill,
+  BsFillExclamationOctagonFill,
+  BsFillExclamationSquareFill,
+  BsExclamationCircle,
+  BsExclamationOctagon,
+  BsExclamationSquare,
+  BsExclamation,
+  BsCheckCircleFill,
+  BsCheckSquareFill,
+  BsCheckCircle,
+  BsCheckSquare,
+  BsCheck,
+  BsInfoCircleFill,
+  BsInfoSquareFill,
+  BsInfoCircle,
+  BsInfoSquare,
+  BsInfo,
 } from "react-icons/bs";
 import {
   SiJava,
@@ -89,6 +109,7 @@ export const ShareIcon = ({ color, size }) => (
   />
 );
 
+// x
 export const FilledCircleXIcon = ({ color, size }) => (
   <BsFillXCircleFill
     className={`${color ? color : "red"} ${size ? size : "medium"}`}
@@ -123,6 +144,107 @@ export const SquareXIcon = ({ color, size }) => (
 
 export const XIcon = ({ color, size }) => (
   <BsX className={`${color ? color : "red"} ${size ? size : "medium"}`} />
+);
+
+// exclamation
+export const FilledCircleExclamationIcon = ({ color, size }) => (
+  <BsFillExclamationCircleFill
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const FilledSquareExclamationIcon = ({ color, size }) => (
+  <BsFillExclamationSquareFill
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const FilledOctoganExclamationIcon = ({ color, size }) => (
+  <BsFillExclamationOctagonFill
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const CircleExclamationIcon = ({ color, size }) => (
+  <BsExclamationCircle
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const OctoganExclamationIcon = ({ color, size }) => (
+  <BsExclamationOctagon
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const SquareExclamationIcon = ({ color, size }) => (
+  <BsExclamationSquare
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const ExclamationIcon = ({ color, size }) => (
+  <BsExclamation
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+// check
+export const FilledCircleCheckIcon = ({ color, size }) => (
+  <BsCheckCircleFill
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const FilledSquareCheckIcon = ({ color, size }) => (
+  <BsCheckSquareFill
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const CircleCheckIcon = ({ color, size }) => (
+  <BsCheckCircle
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const SquareCheckIcon = ({ color, size }) => (
+  <BsCheckSquare
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const CheckIcon = ({ color, size }) => (
+  <BsCheck className={`${color ? color : "red"} ${size ? size : "medium"}`} />
+);
+
+// info
+export const FilledCircleInfoIcon = ({ color, size }) => (
+  <BsInfoCircleFill
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const FilledSquareInfoIcon = ({ color, size }) => (
+  <BsInfoSquareFill
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const CircleInfoIcon = ({ color, size }) => (
+  <BsInfoCircle
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const SquareInfoIcon = ({ color, size }) => (
+  <BsInfoSquare
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const InfoIcon = ({ color, size }) => (
+  <BsInfo className={`${color ? color : "red"} ${size ? size : "medium"}`} />
 );
 
 const icons = {
@@ -199,6 +321,43 @@ const icons = {
   "x-icon": <XIcon />,
   xicon: <XIcon />,
   x: <XIcon />,
+  // exclamation
+  // filled
+  "filledcircleexclamation-icon": <FilledCircleExclamationIcon />,
+  "filledoctoganexclamation-icon": <FilledOctoganExclamationIcon />,
+  "filledsquareexclamation-icon": <FilledSquareExclamationIcon />,
+  filledcircleexclamationicon: <BsFillExclamationCircleFill />,
+  filledoctoganexclamationicon: <FilledOctoganExclamationIcon />,
+  filledsquareexclamationicon: <FilledSquareExclamationIcon />,
+  // empty
+  "circleexclamation-icon": <CircleExclamationIcon />,
+  "octoganexclamation-icon": <OctoganExclamationIcon />,
+  "squareexclamation-icon": <SquareExclamationIcon />,
+  circleexclamationicon: <CircleExclamationIcon />,
+  octoganexclamationicon: <OctoganExclamationIcon />,
+  squareexclamationicon: <SquareExclamationIcon />,
+  // check
+  // filled
+  "filledcirclecheck-icon": <FilledCircleCheckIcon />,
+  "filledsquarecheck-icon": <FilledSquareCheckIcon />,
+  filledcirclecheckicon: <FilledCircleCheckIcon />,
+  filledsquarecheckicon: <FilledSquareCheckIcon />,
+  // empty
+  "circlecheck-icon": <CircleCheckIcon />,
+  "squarecheck-icon": <SquareCheckIcon />,
+  circlecheckicon: <CircleCheckIcon />,
+  squarecheckicon: <SquareCheckIcon />,
+  // info
+  // filled
+  "filledcircleinfo-icon": <FilledCircleInfoIcon />,
+  "filledsquareinfo-icon": <FilledSquareInfoIcon />,
+  filledcircleinfoicon: <FilledCircleInfoIcon />,
+  filledsquareinfoicon: <FilledSquareInfoIcon />,
+  // empty
+  "circleinfo-icon": <CircleInfoIcon />,
+  "squareinfo-icon": <SquareInfoIcon />,
+  circleinfoicon: <CircleInfoIcon />,
+  squareinfoicon: <SquareInfoIcon />,
 };
 
 const sizes = [
@@ -210,19 +369,23 @@ const sizes = [
   "large",
   "larger",
   "x-large",
-  "xx-larger",
+  "xx-large",
 ];
 
 const Icon = (props) => {
   const { color, size, icon, id, className, style } = props;
+
+  const emotionCss = css({
+    svg: {
+      fontSize: size,
+      color: color,
+      background: "aliceblue",
+      borderRadius: "100%",
+    },
+  });
+
   return (
-    <span
-      id={id}
-      style={{ ...style }}
-      className={`${className} ${color} ${
-        sizes.indexOf(size) > -1 ? size : ""
-      }`}
-    >
+    <span id={id} style={{ ...style }} className={`${className} ${emotionCss}`}>
       {icons[icon]}
     </span>
   );
