@@ -90,6 +90,7 @@ const Notification = (props) => {
   const [afterDelay, setAfterDelay] = useState(false);
 
   useEffect(() => {
+    setAfterDelay(!visible);
     if (delay > 0)
       setTimeout(() => {
         setAfterDelay(true);
