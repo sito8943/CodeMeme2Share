@@ -1,7 +1,7 @@
 import React from "react";
 
 // components
-import MemeShare, { Container, AppleDots, Title, Button } from "./App";
+import MemeShare, { Container, AppleDots, Title, FileButton } from "./App";
 
 // images
 import react from "./assets/images/logo512.png";
@@ -18,7 +18,7 @@ const Template = () => {
         <Rotate className="flex justify-content-center align-items-center">
           <img src={react} style={{ width: 150 }} alt="react-logo" />
         </Rotate>
-        <Button>Hola</Button>
+        <FileButton>Hola</FileButton>
       </Container>
     </MemeShare>
   );
