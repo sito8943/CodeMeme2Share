@@ -6,16 +6,23 @@ import { css } from "@emotion/css"; // style
 import "./style.scss";
 import { jsx as _jsx } from "react/jsx-runtime";
 
-const Container = (props) => {
-  const { children, id, className, name, style, options, ignoreDefault } =
-    props;
+const Container = props => {
+  const {
+    children,
+    id,
+    className,
+    name,
+    style,
+    options,
+    ignoreDefault
+  } = props;
   const emotionCss = css(options);
-  return /*#__PURE__*/ _jsx("div", {
+  return /*#__PURE__*/_jsx("div", {
     id: id,
     name: name,
     className: `${className} ${!ignoreDefault ? emotionCss : ""}`,
     style: style,
-    children: children,
+    children: children
   });
 };
 
@@ -32,9 +39,9 @@ Container.defaultProps = {
     backdropFilter: "blur(4px)",
     WebKitBackdropFilter: "blur(4px)",
     borderRadius: "1rem",
-    animation: "",
+    animation: ""
   },
-  ignoreDefault: false,
+  ignoreDefault: false
 };
 Container.propTypes = {
   children: PropTypes.node.isRequired,
@@ -43,6 +50,6 @@ Container.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   options: PropTypes.objectOf(PropTypes.any),
-  ignoreDefault: PropTypes.bool,
+  ignoreDefault: PropTypes.bool
 };
 export default Container;

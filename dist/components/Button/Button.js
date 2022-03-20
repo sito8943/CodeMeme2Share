@@ -6,17 +6,31 @@ import { css } from "@emotion/css"; // styles
 import "./style.scss";
 import { jsx as _jsx } from "react/jsx-runtime";
 
-const Button = (props) => {
-  const { children, id, className, name, style, type, options, ignoreDefault } =
-    props;
+const Button = props => {
+  const {
+    children,
+    id,
+    className,
+    name,
+    style,
+    type,
+    options,
+    ignoreDefault,
+    action,
+    mouseOver,
+    mouseLeave
+  } = props;
   const emotionCss = css(options);
-  return /*#__PURE__*/ _jsx("button", {
+  return /*#__PURE__*/_jsx("button", {
+    onClick: action,
+    onMouseEnter: mouseOver,
+    onMouseLeave: mouseLeave,
     type: type,
     id: id,
     className: `${className} ${!ignoreDefault ? emotionCss : ""}`,
     name: name,
     style: style,
-    children: children,
+    children: children
   });
 };
 
@@ -36,11 +50,14 @@ Button.defaultProps = {
     color: "aliceblue",
     "&:hover": {
       backgroundColor: "#6e3b70",
-      border: "1px solid #6e3b70",
-    },
+      border: "1px solid #6e3b70"
+    }
   },
   type: "button",
   ignoreDefault: false,
+  action: null,
+  mouseOver: null,
+  mouseLeave: null
 };
 Button.propTypes = {
   children: PropTypes.node.isRequired,
@@ -51,5 +68,8 @@ Button.propTypes = {
   type: PropTypes.string,
   options: PropTypes.objectOf(PropTypes.any),
   ignoreDefault: PropTypes.bool,
+  action: PropTypes.func,
+  mouseOver: PropTypes.func,
+  mouseLeave: PropTypes.func
 };
 export default Button;

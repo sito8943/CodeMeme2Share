@@ -6,18 +6,25 @@ import { css } from "@emotion/css"; // style
 import "./style.scss";
 import { jsx as _jsx } from "react/jsx-runtime";
 
-const Paragraph = (props) => {
-  const { id, className, style, name, children, options, ignoreDefault } =
-    props;
-  const emotionCss = css({
+const Paragraph = props => {
+  const {
+    id,
+    className,
+    style,
+    name,
+    children,
     options,
+    ignoreDefault
+  } = props;
+  const emotionCss = css({
+    options
   });
-  return /*#__PURE__*/ _jsx("p", {
+  return /*#__PURE__*/_jsx("p", {
     className: `${className} ${!ignoreDefault ? emotionCss : ""}`,
     style: style,
     id: id,
     name: name,
-    children: children,
+    children: children
   });
 };
 
@@ -28,9 +35,9 @@ Paragraph.defaultProps = {
   name: "",
   options: {
     fontSize: "1rem",
-    color: "aliceblue",
+    color: "aliceblue"
   },
-  ignoreDefault: false,
+  ignoreDefault: false
 };
 Paragraph.propTypes = {
   id: PropTypes.string,
@@ -39,6 +46,6 @@ Paragraph.propTypes = {
   style: PropTypes.objectOf(PropTypes.any),
   children: PropTypes.node.isRequired,
   options: PropTypes.objectOf(PropTypes.any),
-  ignoreDefault: PropTypes.bool,
+  ignoreDefault: PropTypes.bool
 };
 export default Paragraph;
