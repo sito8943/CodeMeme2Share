@@ -4,6 +4,7 @@ import Paragraph from "./components/Typography/Paragraph/Paragraph";
 import Title from "./components/Typography/Title/Title";
 import Container from "./components/Container/Container";
 import Button from "./components/Button/Button";
+import FileButton from "./components/Button/FileButton/FileButton";
 import Icon from "./components/Icons/Icons";
 import AppleDots from "./components/AppleDots/AppleDots";
 
@@ -79,6 +80,6 @@ MemeShare.propTypes = {
   name: PropTypes.string,
 };
 
-export { Paragraph, Title, Container, Button, Icon, AppleDots };
+export { Paragraph, Title, Container, FileButton, Button, Icon, AppleDots };
 
 export default MemeShare;
