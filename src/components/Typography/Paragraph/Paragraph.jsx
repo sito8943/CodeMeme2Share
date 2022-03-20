@@ -12,9 +12,7 @@ const Paragraph = (props) => {
   const { id, className, style, name, children, options, ignoreDefault } =
     props;
 
-  const emotionCss = css({
-    options,
-  });
+  const emotionCss = css(options);
 
   return (
     <p

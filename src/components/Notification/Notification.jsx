@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import PropTypes from "prop-types";
 
@@ -12,7 +12,7 @@ import { css } from "@emotion/css";
 
 // styles
 import "./style.scss";
-import { CircleXIcon } from "../Icons/Icons";
+import { XIcon } from "../Icons/Icons";
 
 const Notification = (props) => {
   const {
@@ -25,6 +25,7 @@ const Notification = (props) => {
     title,
     text,
     delay,
+    visible,
   } = props;
 
   const emotionCss = css(options);
@@ -33,27 +34,42 @@ const Notification = (props) => {
     margin: "-10px -8px 10px 10px",
   });
 
+  const [afterDelay, setAfterDelay] = useState(false);
+
+  useEffect(() => {}, [visible]);
+
   const closeButton = css({
-    background: "none",
+    background: "white",
     border: "none",
     cursor: "pointer",
+    width: 29,
+    padding: "3px 0px 0 0",
+    borderRadius: "100%",
+    transition: "all 100ms ease",
+    "&:hover": {
+      background: "rgb(218, 34, 70)",
+    },
   });
 
   return (
     <Container
       id={id}
       className={`${className} ${!ignoreDefault ? emotionCss : ""}`}
+      name={name}
+      style={{
+        ...style,
+        transition: "all 200ms ease",
+        opacity: afterDelay ? 0 : 1,
+      }}
       ignoreDefault
     >
       <Container className="text-area" ignoreDefault>
-        <Title variant="h3" className="notification-title">
-          {title}
-        </Title>
-        <Paragraph className="notification-body">{text}</Paragraph>
+        <Title variant="h3">{title}</Title>
+        <Paragraph>{text}</Paragraph>
       </Container>
       <Container className={buttonArea} ignoreDefault>
         <Button ignoreDefault className={closeButton}>
-          <CircleXIcon color="red" />
+          <XIcon color="red" />
         </Button>
       </Container>
     </Container>
