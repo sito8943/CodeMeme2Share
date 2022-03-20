@@ -1,6 +1,6 @@
 {
   "name": "codememe2share",
-  "version": "1.10.6",
+  "version": "1.11.0",
   "description": "Do you want to make your cool code shorts public?",
   "main": "dist/App.js",
   "dependencies": {

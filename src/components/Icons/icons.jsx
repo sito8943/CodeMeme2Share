@@ -4,6 +4,13 @@ import {
   BsArrowRight,
   BsFillRecordFill,
   BsFillShareFill,
+  BsFillXCircleFill,
+  BsFillXSquareFill,
+  BsFillXOctagonFill,
+  BsXCircle,
+  BsXOctagon,
+  BsXSquare,
+  BsX,
 } from "react-icons/bs";
 import {
   SiJava,
@@ -82,6 +89,42 @@ export const ShareIcon = ({ color, size }) => (
   />
 );
 
+export const FilledCircleXIcon = ({ color, size }) => (
+  <BsFillXCircleFill
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const FilledSquareXIcon = ({ color, size }) => (
+  <BsFillXSquareFill
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const FilledOctoganXIcon = ({ color, size }) => (
+  <BsFillXOctagonFill
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const CircleXIcon = ({ color, size }) => (
+  <BsXCircle className={`${color ? color : "red"} ${size ? size : "medium"}`} />
+);
+
+export const OctoganXIcon = ({ color, size }) => (
+  <BsXOctagon
+    className={`${color ? color : "red"} ${size ? size : "medium"}`}
+  />
+);
+
+export const SquareXIcon = ({ color, size }) => (
+  <BsXSquare className={`${color ? color : "red"} ${size ? size : "medium"}`} />
+);
+
+export const XIcon = ({ color, size }) => (
+  <BsX className={`${color ? color : "red"} ${size ? size : "medium"}`} />
+);
+
 const icons = {
   // java
   "java-icon": <JavaIcon />,
@@ -128,6 +171,34 @@ const icons = {
   "python-icon": <PythonIcon />,
   pythonicon: <PythonIcon />,
   python: <PythonIcon />,
+  // others
+  // dots
+  "dot-icon": <DotIcon />,
+  doticon: <DotIcon />,
+  dot: <DotIcon />,
+  // share
+  "share-icon": <ShareIcon />,
+  shareicon: <ShareIcon />,
+  share: <ShareIcon />,
+  // x
+  // filled
+  "filledcirclex-icon": <FilledCircleXIcon />,
+  "filledoctoganx-icon": <FilledOctoganXIcon />,
+  "filledsquarex-icon": <FilledSquareXIcon />,
+  filledcirclexicon: <FilledCircleXIcon />,
+  filledoctoganxicon: <FilledOctoganXIcon />,
+  filledsquarexicon: <FilledSquareXIcon />,
+  // empty
+  "circlex-icon": <CircleXIcon />,
+  "octoganx-icon": <OctoganXIcon />,
+  "squarex-icon": <SquareXIcon />,
+  circlexicon: <CircleXIcon />,
+  octoganxicon: <OctoganXIcon />,
+  squarexicon: <SquareXIcon />,
+  // no border
+  "x-icon": <XIcon />,
+  xicon: <XIcon />,
+  x: <XIcon />,
 };
 
 const sizes = [
