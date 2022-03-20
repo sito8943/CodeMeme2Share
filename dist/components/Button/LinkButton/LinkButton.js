@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types"; // emotion
 
-import { css } from "@emotion/css"; // styles
-
-import "./style.scss";
+import { css } from "@emotion/css";
 import { jsx as _jsx } from "react/jsx-runtime";
 
 const LinkButton = props => {

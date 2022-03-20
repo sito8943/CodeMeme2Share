@@ -5,9 +5,6 @@ import PropTypes from "prop-types";
 // emotion
 import { css } from "@emotion/css";
 
-// styles
-import "./style.scss";
-
 const LinkButton = (props) => {
   const {
     children,
