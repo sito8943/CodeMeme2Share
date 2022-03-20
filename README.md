@@ -1,4 +1,4 @@
-npm# CodeMeme2Share@1.11.3
+npm# CodeMeme2Share@1.11.5
 
 Do you want to make your cool code shorts public?
 Just use:
@@ -125,6 +125,7 @@ export default Template;
 
 - Container <i>Flexible container component</i>
   - Rotate <i>Container with rotation animation</i>
+- Notification <i>Floating container to show notifications</i>
 - Title <i>Based on [MUI Typography](https://mui.com/components/typography) title component</i>
 - Paragraph <i>Based on [MUI Typography](https://mui.com/components/typography)</i> body component
   - CodeArea <strong>Beta</strong> <i>Colorized code for everyone</i>
