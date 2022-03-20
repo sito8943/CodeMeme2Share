@@ -28,9 +28,10 @@ const Notification = (props) => {
     visible,
     needToClose,
     position,
+    maxWidth,
   } = props;
 
-  const emotionCss = css(options);
+  const emotionCss = css({ ...options, maxWidth });
 
   const prefabPositions = {
     right: css({ position: "fixed", right: 5 }),
@@ -44,15 +45,16 @@ const Notification = (props) => {
   };
 
   const buttonArea = css({
-    margin: "-10px -8px 10px 10px",
+    margin: "0 -8px 10px 10px",
   });
 
   const closeButton = css({
     background: "white",
     border: "none",
     cursor: "pointer",
-    width: 29,
-    padding: "3px 0px 0 0",
+    width: 20,
+    height: 20,
+    padding: 0,
     borderRadius: "100%",
     transition: "all 100ms ease",
     "&:hover": {
@@ -88,13 +90,13 @@ const Notification = (props) => {
       ignoreDefault
     >
       <Container className="text-area" ignoreDefault>
-        <Title variant="h3">{title}</Title>
+        <Title variant="h5">{title}</Title>
         <Paragraph>{text}</Paragraph>
       </Container>
       {needToClose && (
         <Container className={buttonArea} ignoreDefault>
           <Button action={close} className={closeButton} ignoreDefault>
-            <XIcon color="red" />
+            <XIcon color="red" size="small" />
           </Button>
         </Container>
       )}
@@ -103,9 +105,6 @@ const Notification = (props) => {
 };
 
 Notification.defaultProps = {
-  className: "",
-  id: "",
-  name: "",
   style: {},
   options: {
     display: "flex",
@@ -116,27 +115,32 @@ Notification.defaultProps = {
     borderRadius: "1rem",
     animation: "",
   },
-  ignoreDefault: false,
+  className: "",
+  id: "",
+  name: "",
   title: "",
   text: "",
-  delay: 5000,
-  needToClose: true,
   position: "right-down",
+  delay: 5000,
+  maxWidth: 400,
+  ignoreDefault: false,
+  needToClose: true,
 };
 
 Notification.propTypes = {
   style: PropTypes.objectOf(PropTypes.any),
+  options: PropTypes.objectOf(PropTypes.any),
+  title: PropTypes.string,
+  text: PropTypes.string,
   className: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
-  options: PropTypes.objectOf(PropTypes.any),
-  ignoreDefault: PropTypes.bool,
-  title: PropTypes.string,
-  text: PropTypes.string,
-  delay: PropTypes.number,
-  needToClose: PropTypes.bool,
-  visible: PropTypes.bool.isRequired,
   position: PropTypes.string,
+  delay: PropTypes.number,
+  maxWidth: PropTypes.number,
+  needToClose: PropTypes.bool,
+  ignoreDefault: PropTypes.bool,
+  visible: PropTypes.bool.isRequired,
 };
 
 export default Notification;

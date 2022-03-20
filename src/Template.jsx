@@ -18,7 +18,7 @@ const Template = () => {
     <MemeShare background="random">
       <Notification
         title="Notification"
-        text="This is a notification"
+        text="This is a notification This is a notification This is a notification This is a notification This is a notification This is a notification"
         visible={true}
         delay={0}
       />
