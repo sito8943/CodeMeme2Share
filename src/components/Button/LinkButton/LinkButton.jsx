@@ -15,11 +15,12 @@ const LinkButton = (props) => {
     type,
     options,
     ignoreDefault,
-    mouseOver,
-    mouseLeave,
     link,
     target,
     rel,
+    action,
+    mouseOver,
+    mouseLeave,
   } = props;
 
   const emotionCss = css(options);
@@ -29,6 +30,7 @@ const LinkButton = (props) => {
       href={link}
       target={target}
       rel={rel}
+      onClick={action}
       onMouseEnter={mouseOver}
       onMouseLeave={mouseLeave}
       type={type}
@@ -65,11 +67,11 @@ LinkButton.defaultProps = {
   },
   type: "button",
   ignoreDefault: false,
+  target: "_blank",
+  rel: "noopener noreferrer",
   action: null,
   mouseOver: null,
   mouseLeave: null,
-  target: "_blank",
-  rel: "noopener noreferrer",
 };
 
 LinkButton.propTypes = {
@@ -81,11 +83,12 @@ LinkButton.propTypes = {
   type: PropTypes.string,
   options: PropTypes.objectOf(PropTypes.any),
   ignoreDefault: PropTypes.bool,
-  mouseOver: PropTypes.func,
-  mouseLeave: PropTypes.func,
   link: PropTypes.string.isRequired,
   target: PropTypes.string,
   rel: PropTypes.string,
+  action: PropTypes.func,
+  mouseOver: PropTypes.func,
+  mouseLeave: PropTypes.func,
 };
 
 export default LinkButton;
