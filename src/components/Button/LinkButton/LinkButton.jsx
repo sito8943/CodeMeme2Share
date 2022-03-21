@@ -1,10 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types"; // emotion
 
+import PropTypes from "prop-types";
+
+// emotion
 import { css } from "@emotion/css";
-import { jsx as _jsx } from "react/jsx-runtime";
 
-const LinkButton = props => {
+const LinkButton = (props) => {
   const {
     children,
     id,
@@ -19,23 +20,28 @@ const LinkButton = props => {
     rel,
     action,
     mouseOver,
-    mouseLeave
+    mouseLeave,
   } = props;
+
   const emotionCss = css(options);
-  return /*#__PURE__*/_jsx("a", {
-    href: link,
-    target: target,
-    rel: rel,
-    onClick: action,
-    onMouseEnter: mouseOver,
-    onMouseLeave: mouseLeave,
-    type: type,
-    id: id,
-    className: `${className} ${!ignoreDefault ? emotionCss : ""}`,
-    name: name,
-    style: style,
-    children: children
-  });
+
+  return (
+    <a
+      href={link}
+      target={target}
+      rel={rel}
+      onClick={action}
+      onMouseEnter={mouseOver}
+      onMouseLeave={mouseLeave}
+      type={type}
+      id={id}
+      className={`${className} ${!ignoreDefault ? emotionCss : ""}`}
+      name={name}
+      style={style}
+    >
+      {children}
+    </a>
+  );
 };
 
 LinkButton.defaultProps = {
@@ -56,8 +62,8 @@ LinkButton.defaultProps = {
     color: "aliceblue",
     "&:hover": {
       backgroundColor: "#6e3b70",
-      border: "1px solid #6e3b70"
-    }
+      border: "1px solid #6e3b70",
+    },
   },
   type: "button",
   ignoreDefault: false,
@@ -65,8 +71,9 @@ LinkButton.defaultProps = {
   rel: "noopener noreferrer",
   action: null,
   mouseOver: null,
-  mouseLeave: null
+  mouseLeave: null,
 };
+
 LinkButton.propTypes = {
   children: PropTypes.node.isRequired,
   style: PropTypes.objectOf(PropTypes.any),
@@ -81,6 +88,7 @@ LinkButton.propTypes = {
   rel: PropTypes.string,
   action: PropTypes.func,
   mouseOver: PropTypes.func,
-  mouseLeave: PropTypes.func
+  mouseLeave: PropTypes.func,
 };
+
 export default LinkButton;
