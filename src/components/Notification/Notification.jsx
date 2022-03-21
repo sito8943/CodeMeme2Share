@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 // components
 import Container from "../Container/Container";
 import Button from "../Button/Button";
-import { Paragraph, Title } from "../Typography/Typography";
+import { Paragraph, Title } from "../../Typography";
 
 // emotion
 import { css } from "@emotion/css";

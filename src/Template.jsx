@@ -7,6 +7,7 @@ import MemeShare, {
   Title,
   FileButton,
   Notification,
+  LinkButton,
 } from "./App";
 
 // images
@@ -24,6 +25,7 @@ const Template = () => {
       />
       <Container>
         <AppleDots />
+        <LinkButton link="/">Hola</LinkButton>
       </Container>
     </MemeShare>
   );

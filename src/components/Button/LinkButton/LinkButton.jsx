@@ -54,6 +54,8 @@ LinkButton.defaultProps = {
     border: "1px solid #22233366",
     backdropFilter: "blur(4px)",
     padding: "10px",
+    textDecoration: "none",
+    textAlign: "center",
     borderRadius: "0.5rem",
     color: "aliceblue",
     "&:hover": {

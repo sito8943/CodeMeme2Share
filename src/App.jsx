@@ -3,9 +3,13 @@ import randomInteger from "random-int";
 // components
 import Paragraph from "./components/Typography/Paragraph/Paragraph";
 import Title from "./components/Typography/Title/Title";
+import CodeArea from "./components/Typography/CodeArea/CodeArea";
 import Container from "./components/Container/Container";
-import Button, { FileButton, LinkButton } from "./components/Button/Button";
-import Icon from "./components/Icons/Icons";
+import Rotate from "./components/Container/Rotate/Rotate";
+import Button from "./components/Button/Button";
+import FileButton from "./components/Button/FileButton/FileButton";
+import LinkButton from "./components/Button/LinkButton/LinkButton";
+import Icon, * as icons from "./components/Icons/Icons";
 import AppleDots from "./components/AppleDots/AppleDots";
 import Notification from "./components/Notification/Notification";
 
@@ -84,13 +88,17 @@ MemeShare.propTypes = {
 export {
   Paragraph,
   Title,
+  CodeArea,
   Container,
+  Rotate,
   FileButton,
   LinkButton,
   Button,
   Icon,
   AppleDots,
   Notification,
+  gradients,
+  icons,
 };
 
 export default MemeShare;
