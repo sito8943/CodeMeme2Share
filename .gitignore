@@ -38,8 +38,8 @@ bower_components
 build/Release
 
 # source code
-src
-public
+src/
+public/
 
 # Dependency directories
 node_modules/
