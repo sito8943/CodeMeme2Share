@@ -32,6 +32,13 @@ Loading.defaultProps = {
   name: "",
   style: {},
   options: {
+    width: "100%",
+    height: "100%",
+    position: "fixed",
+    justifyContent: "center",
+    alignItems: "center",
+    zIndex: "99",
+    transition: "200ms all ease",
     display: "flex",
     flexDirection: "column",
     background: "#2223338c",

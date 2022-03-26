@@ -12,8 +12,8 @@ const Spinner = (props) => {
   const { color, size } = props;
 
   const spinnerContainer = css({
-    width: "200px",
-    height: "200px",
+    width: size + 80,
+    height: size + 80,
     display: "inline-block",
     overflow: "hidden",
     background: "rgba(255, 255, 255, 0)",
@@ -30,8 +30,8 @@ const Spinner = (props) => {
 
   const spinnerChild = css({
     position: "absolute",
-    width: "120px",
-    height: "120px",
+    width: size,
+    height: size,
     border: `20px solid ${color}`,
     borderTopColor: "transparent",
     animation: "spinner-rotate 1s linear infinite",
@@ -52,6 +52,7 @@ const Spinner = (props) => {
 
 Spinner.defaultProps = {
   color: "#e15b64",
+  size: 120,
 };
 
 Spinner.propTypes = {
