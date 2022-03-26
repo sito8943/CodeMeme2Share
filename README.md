@@ -124,6 +124,7 @@ export default Template;
 ### Additional Features
 
 - Loading <i>Flexible loading container for loading loops</i>
+  - Spinner <i>Rotating spinner</i>
 - Container <i>Flexible container component</i>
   - Rotate <i>Container with rotation animation</i>
 - Notification <i>Floating container to show notifications</i>
