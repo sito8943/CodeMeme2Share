@@ -1,4 +1,4 @@
-npm# CodeMeme2Share@1.12.5
+npm# CodeMeme2Share@1.12.6
 
 Do you want to make your cool code shorts public?
 Just use:
@@ -123,6 +123,7 @@ export default Template;
 
 ### Additional Features
 
+- Loading <i>Flexible loading container for loading loops</i>
 - Container <i>Flexible container component</i>
   - Rotate <i>Container with rotation animation</i>
 - Notification <i>Floating container to show notifications</i>
