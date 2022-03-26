@@ -25,14 +25,14 @@ const Title = (props) => {
   });
 
   return (
-    <caption
+    <div
       className={`${variant} ${className} ${!ignoreDefault ? emotionCss : ""}`}
       style={style}
       id={id}
       name={name}
     >
       {children}
-    </caption>
+    </div>
   );
 };
 

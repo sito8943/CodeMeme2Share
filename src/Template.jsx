@@ -13,6 +13,8 @@ import MemeShare, {
 // images
 import react from "./assets/images/logo512.png";
 import Rotate from "./components/Container/Rotate/Rotate";
+import Loading from "./components/Loading/Loading";
+import Spinner from "./components/Loading/Spinner/Spinner";
 
 const Template = () => {
   return (
@@ -23,6 +25,9 @@ const Template = () => {
         visible={true}
         delay={0}
       />
+      <Loading>
+        <Spinner />
+      </Loading>
       <Container>
         <AppleDots />
         <LinkButton link="/">Hola</LinkButton>

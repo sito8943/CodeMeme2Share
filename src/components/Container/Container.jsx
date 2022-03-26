@@ -15,14 +15,14 @@ const Container = (props) => {
   const emotionCss = css(options);
 
   return (
-    <container
+    <div
       id={id}
       name={name}
       className={`${className} ${!ignoreDefault ? emotionCss : ""}`}
       style={style}
     >
       {children}
-    </container>
+    </div>
   );
 };
 
