@@ -12,11 +12,11 @@ const AppleDots = (props) => {
   const { color1, color2, color3 } = props;
 
   return (
-    <div className="apple-dots">
+    <container className="apple-dots">
       <DotIcon color={color1} />
       <DotIcon color={color2} />
       <DotIcon color={color3} />
-    </div>
+    </container>
   );
 };
 

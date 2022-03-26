@@ -50,16 +50,17 @@ const MemeShare = (props) => {
   }
 
   return (
-    <div
+    <Container
       id={id}
       className={className}
       name={name}
       style={{
         ...style,
       }}
+      ignoreDefault
     >
       {children}
-    </div>
+    </Container>
   );
 };
 

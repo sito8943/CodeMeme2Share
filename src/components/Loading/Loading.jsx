@@ -5,28 +5,28 @@ import PropTypes from "prop-types";
 // emotion
 import { css } from "@emotion/css";
 
-// style
-import "./style.scss";
+// component
+import Container from "../Container/Container";
 
-const Container = (props) => {
+const Loading = (props) => {
   const { children, id, className, name, style, options, ignoreDefault } =
     props;
-
   const emotionCss = css(options);
 
   return (
-    <container
+    <Container
       id={id}
       name={name}
-      className={`${className} ${!ignoreDefault ? emotionCss : ""}`}
       style={style}
+      ignoreDefault
+      className={`${className} ${!ignoreDefault ? emotionCss : ""}`}
     >
       {children}
-    </container>
+    </Container>
   );
 };
 
-Container.defaultProps = {
+Loading.defaultProps = {
   className: "",
   id: "",
   name: "",
@@ -44,7 +44,7 @@ Container.defaultProps = {
   ignoreDefault: false,
 };
 
-Container.propTypes = {
+Loading.propTypes = {
   children: PropTypes.node.isRequired,
   style: PropTypes.objectOf(PropTypes.any),
   className: PropTypes.string,
@@ -54,4 +54,4 @@ Container.propTypes = {
   ignoreDefault: PropTypes.bool,
 };
 
-export default Container;
+export default Loading;
