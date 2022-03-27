@@ -46,12 +46,13 @@ const MemeShare = props => {
     style.backgroundImage = backgroundImage;
   }
 
-  return /*#__PURE__*/_jsx("div", {
+  return /*#__PURE__*/_jsx(Container, {
     id: id,
     className: className,
     name: name,
     style: { ...style
     },
+    ignoreDefault: true,
     children: children
   });
 };

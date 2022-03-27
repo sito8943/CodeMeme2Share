@@ -1,9 +1,9 @@
 import React from "react"; // components
 
-import MemeShare, { Container, AppleDots, Title, FileButton, Notification, LinkButton } from "./App"; // images
+import MemeShare, { Container, AppleDots, Notification, LinkButton } from "./App"; // images
 
-import react from "./assets/images/logo512.png";
-import Rotate from "./components/Container/Rotate/Rotate";
+import Loading from "./components/Loading/Loading";
+import Spinner from "./components/Loading/Spinner/Spinner";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { jsxs as _jsxs } from "react/jsx-runtime";
 
@@ -15,6 +15,8 @@ const Template = () => {
       text: "This is a notification This is a notification This is a notification This is a notification This is a notification This is a notification",
       visible: true,
       delay: 0
+    }), /*#__PURE__*/_jsx(Loading, {
+      children: /*#__PURE__*/_jsx(Spinner, {})
     }), /*#__PURE__*/_jsxs(Container, {
       children: [/*#__PURE__*/_jsx(AppleDots, {}), /*#__PURE__*/_jsx(LinkButton, {
         link: "/",
