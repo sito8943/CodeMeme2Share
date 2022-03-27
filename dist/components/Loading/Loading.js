@@ -4,6 +4,7 @@ import PropTypes from "prop-types"; // emotion
 import { css } from "@emotion/css"; // component
 
 import Container from "../Container/Container";
+import Spinner from "./Spinner/Spinner";
 import { jsx as _jsx } from "react/jsx-runtime";
 
 const Loading = props => {
@@ -60,4 +61,5 @@ Loading.propTypes = {
   options: PropTypes.objectOf(PropTypes.any),
   ignoreDefault: PropTypes.bool
 };
+export { Spinner };
 export default Loading;
