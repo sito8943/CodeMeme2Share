@@ -12,6 +12,7 @@ import LinkButton from "./components/Button/LinkButton/LinkButton";
 import Icon, * as icons from "./components/Icons/Icons";
 import AppleDots from "./components/AppleDots/AppleDots";
 import Notification from "./components/Notification/Notification";
+import Loading, { Spinner } from "./components/Loading/Loading";
 
 import PropTypes from "prop-types";
 
@@ -98,6 +99,8 @@ export {
   Icon,
   AppleDots,
   Notification,
+  Loading,
+  Spinner,
   gradients,
   icons,
 };

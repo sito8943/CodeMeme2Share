@@ -7,6 +7,7 @@ import { css } from "@emotion/css";
 
 // component
 import Container from "../Container/Container";
+import Spinner from "./Spinner/Spinner";
 
 const Loading = (props) => {
   const { children, id, className, name, style, options, ignoreDefault } =
@@ -60,5 +61,7 @@ Loading.propTypes = {
   options: PropTypes.objectOf(PropTypes.any),
   ignoreDefault: PropTypes.bool,
 };
+
+export { Spinner };
 
 export default Loading;
