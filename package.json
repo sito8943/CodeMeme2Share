@@ -1,6 +1,6 @@
 {
   "name": "codememe2share",
-  "version": "1.12.5",
+  "version": "1.12.13",
   "description": "Do you want to make your cool code shorts public?",
   "main": "dist/App.js",
   "dependencies": {
@@ -47,6 +47,7 @@
   "author": "Sito",
   "license": "ISC",
   "repository": "https://github.com/SitoNumbis/CodeMeme2Share.git",
+  "homepage": "https://sitonumbis.github.io/CodeMeme2Share/",
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/preset-react": "^7.16.7"

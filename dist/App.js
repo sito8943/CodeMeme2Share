@@ -11,6 +11,7 @@ import LinkButton from "./components/Button/LinkButton/LinkButton";
 import Icon, * as icons from "./components/Icons/Icons";
 import AppleDots from "./components/AppleDots/AppleDots";
 import Notification from "./components/Notification/Notification";
+import Loading, { Spinner } from "./components/Loading/Loading";
 import PropTypes from "prop-types"; // global styles
 
 import "./assets/theme/colors.scss";
@@ -46,12 +47,13 @@ const MemeShare = props => {
     style.backgroundImage = backgroundImage;
   }
 
-  return /*#__PURE__*/_jsx("div", {
+  return /*#__PURE__*/_jsx(Container, {
     id: id,
     className: className,
     name: name,
     style: { ...style
     },
+    ignoreDefault: true,
     children: children
   });
 };
@@ -75,5 +77,5 @@ MemeShare.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string
 };
-export { Paragraph, Title, CodeArea, Container, Rotate, FileButton, LinkButton, Button, Icon, AppleDots, Notification, gradients, icons };
+export { Paragraph, Title, CodeArea, Container, Rotate, FileButton, LinkButton, Button, Icon, AppleDots, Notification, Loading, Spinner, gradients, icons };
 export default MemeShare;
