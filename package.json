@@ -47,7 +47,6 @@
   "author": "Sito",
   "license": "ISC",
   "repository": "https://github.com/SitoNumbis/CodeMeme2Share.git",
-  "homepage": "https://sitonumbis.github.io/CodeMeme2Share/",
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/preset-react": "^7.16.7"
