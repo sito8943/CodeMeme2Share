@@ -1,25 +1,28 @@
 .ms-code {
-    background: #22233387;
-    padding: 20px;
-    border-radius: 1rem;
-    backdrop-filter: blur(5px);
-    color: aliceblue;
-    font-size: 1.2rem;
-  
-    .ms-keyword {
-      color: dodgerblue;
-    }
-  
-    .ms-var {
-      color: aliceblue;
-    }
-  
-    .ms-string {
-      color: #f7c127;
-    }
-  
-    .ms-type {
-      color: #2bcb45;
-    }
-  }
-  
+  background: #22233387;
+  padding: 20px;
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+  color: aliceblue;
+  font-size: 1.2rem;
+}
+
+.ms-keyword {
+  color: dodgerblue;
+}
+
+.ms-number {
+  color: rgb(255, 174, 0);
+}
+
+.ms-var {
+  color: aliceblue;
+}
+
+.ms-string {
+  color: #f7c127;
+}
+
+.ms-type {
+  color: #2bcb45;
+}

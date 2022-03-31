@@ -2,6 +2,12 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
+// html render
+import renderHTML from "react-render-html";
+
+// utils
+import ParseLanguage from "./utils";
+
 // emotion
 import { css } from "@emotion/css";
 
@@ -9,8 +15,7 @@ import { css } from "@emotion/css";
 import "./style.scss";
 
 const CodeArea = (props) => {
-  const { id, className, style, name, children, options, ignoreDefault } =
-    props;
+  const { id, className, style, name, text, options, ignoreDefault } = props;
 
   const emotionCss = css({
     options,
@@ -23,7 +28,7 @@ const CodeArea = (props) => {
       id={id}
       name={name}
     >
-      {children}
+      {renderHTML(ParseLanguage(text))}
     </p>
   );
 };
@@ -50,7 +55,7 @@ CodeArea.propTypes = {
   className: PropTypes.string,
   name: PropTypes.string,
   style: PropTypes.objectOf(PropTypes.any),
-  children: PropTypes.node.isRequired,
+  text: PropTypes.string.isRequired,
   options: PropTypes.objectOf(PropTypes.any),
   ignoreDefault: PropTypes.bool,
 };

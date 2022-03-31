@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // components
 import MemeShare, {
@@ -11,8 +11,15 @@ import MemeShare, {
 // images
 import Loading from "./components/Loading/Loading";
 import Spinner from "./components/Loading/Spinner/Spinner";
+import { CodeArea } from "./Typography";
 
 const Template = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
   return (
     <MemeShare background="random">
       <Notification
@@ -21,12 +28,15 @@ const Template = () => {
         visible={true}
         delay={0}
       />
-      <Loading>
-        <Spinner />
-      </Loading>
+      {loading && (
+        <Loading>
+          <Spinner />
+        </Loading>
+      )}
       <Container>
         <AppleDots />
         <LinkButton link="/">Hola</LinkButton>
+        <CodeArea text="const a = '10'" />
       </Container>
     </MemeShare>
   );
