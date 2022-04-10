@@ -38,7 +38,7 @@ Loading.defaultProps = {
     position: "fixed",
     justifyContent: "center",
     alignItems: "center",
-    zIndex: "99",
+    zIndex: 99,
     transition: "200ms all ease",
     display: "flex",
     flexDirection: "column",

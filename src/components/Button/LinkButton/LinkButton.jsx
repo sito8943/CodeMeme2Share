@@ -1,5 +1,6 @@
 import React from "react";
 
+// prop-types
 import PropTypes from "prop-types";
 
 // emotion
@@ -67,7 +68,7 @@ LinkButton.defaultProps = {
   },
   type: "button",
   ignoreDefault: false,
-  target: "_blank",
+  target: "_self",
   rel: "noopener noreferrer",
   action: null,
   mouseOver: null,
